@@ -1,0 +1,23 @@
+
+# -------------------------- Alignment -----------------------------------
+
+alignment_dir				Alignment/     # located in the same directory as BB executable  
+alignment_input_file			BB_test.txt    # in the alignment_dir 
+
+alignment			yes
+alignment_direct		yes		# yes - initial alignment is constructed from un-gapped sequences
+						# no - alignment of alignment_input_file continues
+
+gap_penalty				15	# a good range is 13-16
+
+using_affine_gap			no	# at this version, either affine, or teminal, gap may be used. more to come
+opening_gap_penalty 			28	#
+
+using_terminal_gap_penalty		yes
+terminal_gap_penalty			8
+
+maxFULL_dCR_0				50	 # stopping condition. 
+						 # number of iterations without updating the best value of the objective function
+
+num_DM_iterations			100 # number of Divide and Merge steps in one iteration
+num_Grad_iterations			10  # number of iterations in alignment to fixed profile
